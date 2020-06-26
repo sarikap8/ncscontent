@@ -39,27 +39,36 @@ public class MonkeyFaces {
 		        "ʕง ͠° ͟ل͜ ͡°)ʔ",
 		        "  \\_⏄_/  ",
 		        "  --0--   ",
-		        "  ⎛   ⎞   "},
+		        "          ⎛   ⎞   "
+		    },
+			
 			{
-		        "ʕ༼ ◕_◕ ༽ʔ",
+		        "  ʕ༼ ◕_◕ ༽ʔ",
 		        "  \\_⎏_/  ",
 		        "  ++1++  ",
-		        "   ⌋ ⌊   "},
+		        "          ⌋ ⌊   "
+		    },
+			
 			{
-		        "ʕ(▀ ⍡ ▀)ʔ",
+		        " ʕ(▀ ⍡ ▀)ʔ",
 		        "  \\_⎐_/ ",
 		        "  <-2-> ",
-		        "  〈  〉 "},
+		        "        〈  〉 "
+		    },
+			
 			{
 		        "ʕ ͡° ͜ʖ ° ͡ʔ",
 		        "  \\_⍾_/  ",
 		        "  ==3==  ",
-		        "  _/ \\_  "},
+		        "  _/ \\_  "
+		    },
+			
 			{
 		        "ʕ ͡° ͜ʖ ° ͡ʔ",
 		        "  \\_⍾_/  ",
 		        "  ==4==  ",
-		        "  _/ \\_  "},
+		        "  _/ \\_  "
+		    },
 		
 		};
 		
@@ -82,11 +91,13 @@ public class MonkeyFaces {
 		
 		//how many sepearte parts are there in a monkey monkey? (logical columns)
 		    String end;
+		    String[][] monkeys1;
 			for (int row =0; row < monkeys.length;row++)  //this logic assumes monkeys are uniform (same amount of parts)
 			{ //we need to cycle through rows to System.out.println colunms uniformally
 		        for (int col=0;col<monkeys[row].length;col++)
 		        {// System.out.printlns column, with special syntax for space instead of new line
-		            System.out.print(monkeys[row][col] + " ");
+		          
+		        	System.out.print(monkeys[row][col] + " ");
 			//this is new line between seperate parts
 		        System.out.println();
 		        }
