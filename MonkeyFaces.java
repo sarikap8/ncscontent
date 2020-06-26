@@ -16,19 +16,22 @@ public class MonkeyFaces {
 		3. Study loops and zero based counting
 		4. The challenge is to understand 2-dimensional arrays assignment and referencing elements
 		*/
+		
+		
 		//Basic program shows System.out.println statement of a concatenation of strings with a tab to uniform spacing
 		System.out.println("Begin Sample");
 		System.out.println("4 little monkeys jumping on the bed...");
-		System.out.println("ʕง ͠° ͟ل͜ ͡°)ʔ" + "\t" + "ʕ༼ ◕_◕ ༽ʔ" + "\t" + "ʕ(▀ ⍡ ▀)ʔ" + "\t" + "ʕ ͡° ͜ʖ ° ͡ʔ");
-		System.out.println("  \\_⏄_/  " + "\t" + " \\_⎏_/  " + "\t" + "  \\_⎐_/ " + "\t" + "  \\_⍾_/  ");
+		System.out.println("ʕง ͠° ͟ل͜ ͡°)ʔ"  + "\t" + "ʕ༼ ◕_◕ ༽ʔ" + "\t" + "         ʕ(▀ ⍡ ▀)ʔ"+ "\t" + "ʕ ͡° ͜ʖ ° ͡ʔ");
+		System.out.println("  \\_⏄_/  "  + "\t"+" \\_⎏_/  " + "\t" + "  \\_⎐_/ " + "\t" + "  \\_⍾_/  ");
 		System.out.println("  --0--   " + "\t" + " ++1++  " + "\t" + "  <-2-> " + "\t" + "  ==3==  ");
-		System.out.println("          ⎛   ⎞   " + "\t"+ "                            ⌋ ⌊   " + "\t" + "        〈  〉 " + "\t" + "       _/ \\_  ");
+		System.out.println("         ⎛   ⎞   " + "\t" + "                            ⌋ ⌊   " + "\t" +  "                         〈  〉  " + "\t" + "          _/ \\_  ");
 		System.out.println("End Sample");
+		
 		/*
 		Setup 10 monkeys in the monkey array, be creative
 		Lookup and learn about ascii and unicode 
-		  a lot of ascii is on keyboard
-		  for unicode press control-command-space on Mac */
+		a lot of ascii is on keyboard
+		for unicode press control-command-space on Mac */
 
 		String[][] monkeys = {
 			{
@@ -65,11 +68,11 @@ public class MonkeyFaces {
 		*/
 		//begin the poem
 		System.out.println();
-		System.out.println("Monkey Jumpers Poem in Python");
+		System.out.println("Monkey Jumpers Poem in Java");
 		
 		
 		int monkeyCount = monkeys.length;        //how many monkeys do we have defined above? (logical rows)
-		for (int i =monkeyCount; i>=1; i--)      //loop through logic of code according to the monkey count
+		for (int i = monkeyCount; i >= 1; i--)      //loop through logic of code according to the monkey count
 		{  	
 			
 			//this System.out.println statement shows current count of Monkeys
@@ -79,11 +82,11 @@ public class MonkeyFaces {
 		
 		    //how many separate parts are there in a monkey monkey? (logical columns)
 		   
-			for (int row =0; row < monkeyCount ;row++)  //this logic assumes monkeys are uniform (same amount of parts)
+			for (int row = 0; row < monkeyCount; row++)  //this logic assumes monkeys are uniform (same amount of parts)
 			{ 
 				//we need to cycle through rows to System.out.println columns uniformly
 		        
-				for (int col=0;col<monkeys[row].length;col++)
+				for (int col = 0; col < monkeys[row].length; col++)
 		        {
 					
 					// System.out.printlns column, with special syntax for space instead of new line
@@ -93,8 +96,8 @@ public class MonkeyFaces {
 		            System.out.println();
 		        }
 		    
-			//this new line gives separation between stanza of poem
-		    System.out.println();
+				//this new line gives separation between stanza of poem
+			    System.out.println();
 			}
 		    
 			//countdown for poem, changes output and loop control
