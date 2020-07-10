@@ -76,6 +76,7 @@ public class MonkeyFaces {
 		System.out.println();
 		System.out.println("Monkey Jumpers Poem in Java");
 		
+		int num = 0;
 		
 		int monkeyCount = monkeys.length;        //how many monkeys do we have defined above? (logical rows)
 		for (int i = monkeyCount; i >= 1; i--)   //loop through logic of code according to the monkey count
@@ -117,5 +118,7 @@ public class MonkeyFaces {
 		System.out.println("0000000000000000000000000000000000");
 		System.out.println("             THE END              ");
 	}
+	
+	//testing
 
 }
