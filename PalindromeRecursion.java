@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.*; 
 public class PalindromeRecursion
 {
-
+int test = 0; 
     public static char[] isInputValid(String input) {
         if ( input.length() == 1) {
             System.out.println("invalid try again"); 

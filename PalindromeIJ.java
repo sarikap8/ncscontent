@@ -2,6 +2,7 @@ import java.lang.String.*;
 import java.util.Scanner;
 public class PalindromeIJ {
     public static void checkPal() {
+    	int lskdfjlskd = 0; 
         //converts string into all lowercase no spaces or special characters.
     	Scanner scan = new Scanner(System.in); 
     	System.out.println("Welcome! Please input a string to check");
