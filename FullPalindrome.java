@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Palindrome {
+public class FullPalindrome {
 	// Instance variables
 		private String Candidate;
 		private String Log;
@@ -10,14 +10,13 @@ public class Palindrome {
 	    {
 			// Input using console
 	        Scanner sc = new Scanner(System.in);
-					
-			System.out.print("Enter a word or phrase: ");
+	        System.out.print("Enter a word or phrase: ");
 
 	        // Takes input from the keyboard
 	        String name = sc.nextLine();
 
 	        // Evaluate by all methods
-			Palindrome test = new Palindrome();
+			FullPalindrome test = new FullPalindrome();
 			test.setPaliCandidate(name);
 	        test.isPali(1);
 	        test.isPali(2);
@@ -27,7 +26,7 @@ public class Palindrome {
 		public static String isPaliLog(String candidate, int method)	// Business logic driver
 	    {
 			// Tests candidate and returns result message
-			Palindrome test = new Palindrome();
+			FullPalindrome test = new FullPalindrome();
 			test.setPaliCandidate(candidate);
 	        test.isPali(method);
 	        return test.getPaliLog();
@@ -63,7 +62,7 @@ public class Palindrome {
 				: "Not pali :(",
 				method
 				) );
-	        ConsoleIO.outputString( this.getPaliLog() );
+	        System.out.println( this.getPaliLog() );
 	    }
 		
 		private boolean isPali(int method) 
@@ -80,9 +79,9 @@ public class Palindrome {
 				return palindromeTestIJ();
 			case 2:
 				//return palindromeRecurseDriver();
-				return palindromeReplace();
+				return palindromeSubstring();
 			case 3:
-				//return palindromeReplace();
+				//return palindromeSubstring();
 				return palindromeRecurseDriver();
 			default:
 	    		this.setPaliLog(Candidate +" not run " + method + " unkown");
@@ -91,12 +90,12 @@ public class Palindrome {
 
 		}
 
-		private boolean palindromeReplace()
+		private boolean palindromeSubstring()
 		{
 			/// Entering Replace (Built-in) method
 	        String msg = "Substring method";
 	        
-	        ConsoleIO.outputString( String.format("\n%s, Candidate: \"%s\",  Length = %d" ,msg, Candidate, Candidate.length()) );
+	        System.out.println( String.format("\n%s, Candidate: \"%s\",  Length = %d" ,msg, Candidate, Candidate.length()) );
 	    	//int step = 0;
 
 	        int startPosition = 0;
@@ -154,10 +153,12 @@ public class Palindrome {
 		}
 
 		private boolean palindromeTestIJ()
+		//second IJ method (using charAt) 
+		//AP Exam does not allow usage of this method, because it has charAt.
 	    {	
 			// Entering IJ method
 	        String msg = "IJ method";
-	        ConsoleIO.outputString( String.format("\n%s, Candidate: \"%s\",  Length = %d" ,msg, Candidate, Candidate.length()) );
+	        System.out.println( String.format("\n%s, Candidate: \"%s\",  Length = %d" ,msg, Candidate, Candidate.length()) );
 	        
 	    	
 	        String userWord = Candidate.replaceAll("[^A-Za-z]+", "").toLowerCase();
@@ -189,7 +190,7 @@ public class Palindrome {
 	    {	
 	        // Recursion driver,  used to setup recursion method
 			String msg = "Recursion method";
-	        ConsoleIO.outputString( String.format("\n%s, Candidate: \"%s\",  Length = %d" ,msg, Candidate, Candidate.length()) );
+	        System.out.println( String.format("\n%s, Candidate: \"%s\",  Length = %d" ,msg, Candidate, Candidate.length()) );
 
 	        String testStr = Candidate;
 			System.out.println(testStr)	;
@@ -241,10 +242,12 @@ public class Palindrome {
 		public static void main(String[] args) 						// Console driver
 	    {
 			// Input using console
-	        String candidate = ConsoleMethods.inputString("Enter a word or phrase: ");
+			Scanner scan = new Scanner(System.in); 
+			System.out.println("Enter a word or phrase");
+	        String candidate = scan.nextLine();
 
 	        // Evaluate by all methods
-			Palindrome test = new Palindrome();
+	        FullPalindrome test = new FullPalindrome();
 			test.setPaliCandidate(candidate);
 	        test.isPali(1);
 	        test.isPali(2);
